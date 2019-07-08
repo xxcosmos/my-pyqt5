@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 import sys
 from PyQt5.QtGui import QIcon
+import assets.demo
 
 
 class Example(QMainWindow):
@@ -59,5 +60,11 @@ class Example(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    # ex = Example()
+    # ex = assets.Ui_Form()
+
+    main_window = QMainWindow()
+    ui = assets.demo.Ui_Form()
+    ui.setupUi(main_window)
+    main_window.show()
     sys.exit(app.exec_())

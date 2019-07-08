@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'mwin.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.0
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(604, 426)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(40, 30, 60, 16))
+        self.label.setObjectName("label")
+        self.originText = QtWidgets.QPlainTextEdit(self.centralwidget)
+        self.originText.setGeometry(QtCore.QRect(100, 30, 291, 151))
+        self.originText.setObjectName("originText")
+        self.isRealTimeTranslation = QtWidgets.QCheckBox(self.centralwidget)
+        self.isRealTimeTranslation.setGeometry(QtCore.QRect(410, 30, 171, 20))
+        self.isRealTimeTranslation.setObjectName("isRealTimeTranslation")
+        self.isWindowTop = QtWidgets.QCheckBox(self.centralwidget)
+        self.isWindowTop.setGeometry(QtCore.QRect(410, 50, 121, 20))
+        self.isWindowTop.setObjectName("isWindowTop")
+        self.isPaperMode = QtWidgets.QCheckBox(self.centralwidget)
+        self.isPaperMode.setGeometry(QtCore.QRect(410, 70, 121, 20))
+        self.isPaperMode.setObjectName("isPaperMode")
+        self.label_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(460, 280, 61, 61))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("google.png"))
+        self.label_2.setScaledContents(True)
+        self.label_2.setObjectName("label_2")
+        self.TranslateButton = QtWidgets.QPushButton(self.centralwidget)
+        self.TranslateButton.setGeometry(QtCore.QRect(430, 150, 111, 31))
+        self.TranslateButton.setObjectName("TranslateButton")
+        self.copyButton = QtWidgets.QPushButton(self.centralwidget)
+        self.copyButton.setGeometry(QtCore.QRect(430, 180, 113, 32))
+        self.copyButton.setObjectName("copyButton")
+        self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(40, 220, 60, 16))
+        self.label_3.setObjectName("label_3")
+        self.translatedText = QtWidgets.QTextEdit(self.centralwidget)
+        self.translatedText.setGeometry(QtCore.QRect(100, 220, 291, 141))
+        self.translatedText.setObjectName("translatedText")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 604, 22))
+        self.menubar.setObjectName("menubar")
+        self.menuFile = QtWidgets.QMenu(self.menubar)
+        self.menuFile.setTearOffEnabled(False)
+        self.menuFile.setObjectName("menuFile")
+        self.menuSetting = QtWidgets.QMenu(self.menubar)
+        self.menuSetting.setObjectName("menuSetting")
+        self.menuHelp = QtWidgets.QMenu(self.menubar)
+        self.menuHelp.setToolTipsVisible(False)
+        self.menuHelp.setObjectName("menuHelp")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.actionlanguage = QtWidgets.QAction(MainWindow)
+        self.actionlanguage.setObjectName("actionlanguage")
+        self.actiondestination_language = QtWidgets.QAction(MainWindow)
+        self.actiondestination_language.setObjectName("actiondestination_language")
+        self.menuSetting.addAction(self.actionlanguage)
+        self.menuSetting.addAction(self.actiondestination_language)
+        self.menubar.addAction(self.menuFile.menuAction())
+        self.menubar.addAction(self.menuSetting.menuAction())
+        self.menubar.addAction(self.menuHelp.menuAction())
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label.setText(_translate("MainWindow", "原文："))
+        self.isRealTimeTranslation.setText(_translate("MainWindow", "Real Time translation"))
+        self.isWindowTop.setText(_translate("MainWindow", "Window top"))
+        self.isPaperMode.setText(_translate("MainWindow", "Paper mode"))
+        self.TranslateButton.setText(_translate("MainWindow", "Translate"))
+        self.copyButton.setText(_translate("MainWindow", "Copy"))
+        self.label_3.setText(_translate("MainWindow", "翻译："))
+        self.menuFile.setTitle(_translate("MainWindow", "File"))
+        self.menuSetting.setTitle(_translate("MainWindow", "Setting"))
+        self.menuHelp.setTitle(_translate("MainWindow", "Help"))
+        self.actionlanguage.setText(_translate("MainWindow", "language"))
+        self.actiondestination_language.setText(_translate("MainWindow", "destination language"))

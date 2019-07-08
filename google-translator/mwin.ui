@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>604</width>
+                <height>426</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>MainWindow</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <widget class="QLabel" name="label">
+                <property name="geometry">
+                    <rect>
+                        <x>40</x>
+                        <y>30</y>
+                        <width>60</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>原文：</string>
+                </property>
+            </widget>
+            <widget class="QPlainTextEdit" name="originText">
+                <property name="geometry">
+                    <rect>
+                        <x>100</x>
+                        <y>30</y>
+                        <width>291</width>
+                        <height>151</height>
+                    </rect>
+                </property>
+            </widget>
+            <widget class="QCheckBox" name="isRealTimeTranslation">
+                <property name="geometry">
+                    <rect>
+                        <x>410</x>
+                        <y>30</y>
+                        <width>171</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Real Time translation</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox" name="isWindowTop">
+                <property name="geometry">
+                    <rect>
+                        <x>410</x>
+                        <y>50</y>
+                        <width>121</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Window top</string>
+                </property>
+            </widget>
+            <widget class="QCheckBox" name="isPaperMode">
+                <property name="geometry">
+                    <rect>
+                        <x>410</x>
+                        <y>70</y>
+                        <width>121</width>
+                        <height>20</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Paper mode</string>
+                </property>
+            </widget>
+            <widget class="QLabel" name="label_2">
+                <property name="geometry">
+                    <rect>
+                        <x>460</x>
+                        <y>280</y>
+                        <width>61</width>
+                        <height>61</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string/>
+                </property>
+                <property name="pixmap">
+                    <pixmap>google.png</pixmap>
+                </property>
+                <property name="scaledContents">
+                    <bool>true</bool>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="TranslateButton">
+                <property name="geometry">
+                    <rect>
+                        <x>430</x>
+                        <y>150</y>
+                        <width>111</width>
+                        <height>31</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Translate</string>
+                </property>
+            </widget>
+            <widget class="QPushButton" name="copyButton">
+                <property name="geometry">
+                    <rect>
+                        <x>430</x>
+                        <y>180</y>
+                        <width>113</width>
+                        <height>32</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>Copy</string>
+                </property>
+            </widget>
+            <widget class="QLabel" name="label_3">
+                <property name="geometry">
+                    <rect>
+                        <x>40</x>
+                        <y>220</y>
+                        <width>60</width>
+                        <height>16</height>
+                    </rect>
+                </property>
+                <property name="text">
+                    <string>翻译：</string>
+                </property>
+            </widget>
+            <widget class="QTextEdit" name="translatedText">
+                <property name="geometry">
+                    <rect>
+                        <x>100</x>
+                        <y>220</y>
+                        <width>291</width>
+                        <height>141</height>
+                    </rect>
+                </property>
+            </widget>
+        </widget>
+        <widget class="QMenuBar" name="menubar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>604</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <widget class="QMenu" name="menuFile">
+                <property name="tearOffEnabled">
+                    <bool>false</bool>
+                </property>
+                <property name="title">
+                    <string>File</string>
+                </property>
+            </widget>
+            <widget class="QMenu" name="menuSetting">
+                <property name="title">
+                    <string>Setting</string>
+                </property>
+                <addaction name="actionlanguage"/>
+                <addaction name="actiondestination_language"/>
+            </widget>
+            <widget class="QMenu" name="menuHelp">
+                <property name="title">
+                    <string>Help</string>
+                </property>
+                <property name="toolTipsVisible">
+                    <bool>false</bool>
+                </property>
+            </widget>
+            <addaction name="menuFile"/>
+            <addaction name="menuSetting"/>
+            <addaction name="menuHelp"/>
+        </widget>
+        <widget class="QStatusBar" name="statusbar"/>
+        <action name="actionlanguage">
+            <property name="text">
+                <string>language</string>
+            </property>
+        </action>
+        <action name="actiondestination_language">
+            <property name="text">
+                <string>destination language</string>
+            </property>
+        </action>
+    </widget>
+    <resources/>
+    <connections/>
+</ui>
