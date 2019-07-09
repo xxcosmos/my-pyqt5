@@ -1,7 +1,8 @@
 import sys
-import cv2
+
 from PyQt5.QtCore import QTranslator
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMenu, qApp
+
 from mwin import Ui_MainWindow
 
 
