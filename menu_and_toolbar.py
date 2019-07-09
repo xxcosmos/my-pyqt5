@@ -1,6 +1,7 @@
+from PyQt5.QtCore import QRect
 from PyQt5.QtWidgets import *
 import sys
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 import assets.demo
 
 
@@ -10,8 +11,12 @@ class Example(QMainWindow):
         self.init_ui()
 
     def init_ui(self):
+        label_2 = QLabel(self)
+        label_2.setGeometry(0, 0, 61, 61)
+        label_2.setPixmap(QPixmap("google-translator/google.png"))
+        label_2.setScaledContents(True)
         # QAction是菜单栏、工具栏或者快捷键的动作的组合
-        exit_act = QAction(QIcon('../assets/image.jpg'), '&Exit', self)
+        exit_act = QAction(QIcon('assets/image.jpg'), '&Exit', self)
         exit_act.setShortcut('Ctrl+Q')
         exit_act.setStatusTip('退出程序')
         exit_act.triggered.connect(qApp.quit)
@@ -60,11 +65,11 @@ class Example(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    # ex = Example()
+    ex = Example()
     # ex = assets.Ui_Form()
 
-    main_window = QMainWindow()
-    ui = assets.demo.Ui_Form()
-    ui.setupUi(main_window)
-    main_window.show()
+    # main_window = QMainWindow()
+    # ui = assets.demo.Ui_Form()
+    # ui.setupUi(main_window)
+    # main_window.show()
     sys.exit(app.exec_())
